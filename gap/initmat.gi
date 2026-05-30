@@ -104,7 +104,7 @@ BindGlobal( "PGCharSubgroups", function(G)
     cent := TwoStepCentralizersByLcs( G );
     omega := OmegaSubgroupsByLcs( G );
     size := Size( G );
-    if size <= 512 and ID_AVAILABLE( size ) then 
+    if size <= 512 and ID_AVAILABLE( size ) <> fail then 
         return Union(cent, omega, MaxSubIntersections(G));
     else
         return Union( cent, omega );
