@@ -161,8 +161,9 @@ BindGlobal( "NiceHybridGroup", function( A )
 
     # catch the trivial cases
     if Length( A.glAutos ) = 0 or A.glOrder = 1 then
+        Print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
         Unbind( A.glOper );
-        A.glautos := [];
+        A.glAutos := [];
         return;
     fi;
 
