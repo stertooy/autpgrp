@@ -290,6 +290,8 @@ BindGlobal( "BlockOrbitStabilizer", function( B, oper, os, fpt, info )
                         if not IsOne( aut ) then
                             Add( pstab, g );
                             Add( stabl, aut );
+                        else
+                            Error("BUG!");
                         fi;
                     fi;
                 else
